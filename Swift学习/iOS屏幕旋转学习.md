@@ -39,9 +39,9 @@
 
 **（1） 设备旋转带来的屏幕自适应转动**
 
-    当手机的重力感应打开的时候，如果用户旋转手机，系统会抛发UIDeviceOrientationDidChangeNotification事件。您可以分别设置Application和UIViewcontroller支持的旋转方向。Application的设置会影响整个App,UIViewcontroller的设置仅仅会影响一个viewController。当UIKit收到UIDeviceOrientationDidChangeNotification事件的时候，会根据Application和UIViewcontroller的设置,如果双方都支持此方向,则会自动屏幕旋转到这个方向。更code的表达就是,会对两个设置求与,得到可以支持的方向。如果求与之后，没有任何可支持的方向，则会抛发UIApplicationInvalidInterfaceOrientationException异常。
+当手机的重力感应打开的时候，如果用户旋转手机，系统会抛发UIDeviceOrientationDidChangeNotification事件。您可以分别设置Application和UIViewcontroller支持的旋转方向。Application的设置会影响整个App,UIViewcontroller的设置仅仅会影响一个viewController。当UIKit收到UIDeviceOrientationDidChangeNotification事件的时候，会根据Application和UIViewcontroller的设置,如果双方都支持此方向,则会自动屏幕旋转到这个方向。更code的表达就是,会对两个设置求与,得到可以支持的方向。如果求与之后，没有任何可支持的方向，则会抛发UIApplicationInvalidInterfaceOrientationException异常。
 
- **2. 程序强制转向**
+ **（2） 程序强制转向**
 
 程序代码实现，强制要求某个页面转到指定的方向，如下述代码所示：
 
